@@ -2,22 +2,16 @@
 
 <dl>
   <dt> APR </dt>
-  <dd> <%= @apr %> </dd>
+  <dd> <%= @apr.to_s(:percentage, { :precision => 4}) %> </dd>
 
   <dt> Number of years </dt>
   <dd> <%= @years %> </dd>
 
   <dt> Principal </dt>
-  <dd> <%= @pv %> </dd>
-
-  <dt> Numerator </dt>
-  <dd> <%= @numerator %> </dd>
-
-  <dt> Denominator </dt>
-  <dd> <%= @denominator %> </dd>
+  <dd> <%= @pv.to_s(:currency, { :precision => 2}) %> </dd>
 
   <dt> Payment </dt>
-  <dd> <%= @pmt %> </dd>
+  <dd> <%= @pmt.to_s(:currency, { :precision => 2}) %> </dd>
 </dl>
 
 <a href="/payment/new"> Calculate another payment </a>
